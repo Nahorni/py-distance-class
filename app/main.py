@@ -9,10 +9,7 @@ class Distance:
     def check_to_km(distance: Distance | int | float) -> int | float:
         if isinstance(distance, Distance):
             return distance.km
-        elif isinstance(distance, (int, float)):
-            return distance
-        else:
-            raise TypeError("invalid data type")
+        return distance
 
     def __str__(self) -> str:
         return f"Distance: {self.km} kilometers."
